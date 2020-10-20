@@ -28,10 +28,11 @@ use Illuminate\Support\Facades\Route;
 
     //return $arreglo;
 //});
-Route::get('ejemplo',function(){
+/*Route::get('ejemplo',function(){
 	$dato = request("dato");
 	return view("ejemplo",["dato"=>$dato]);
-});
+});*/
+
 
 Route::get('/prueba/{id_producto}', function ($id_producto) {
 	//return $id_producto;
@@ -41,6 +42,6 @@ Route::get('/prueba/{id_producto}', function ($id_producto) {
 
 });
 
-Route::get('/prueba/{id_producto}', 'PruebaController@show');
+Route::get('/ejemplo/{id}', 'PruebaController@show');
 
 Route::get('/', 'NoticiasController@show');

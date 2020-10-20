@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Usuarios;
+use App\Noticias;
 use DB;
 
 class PruebaController extends Controller
@@ -22,11 +22,11 @@ class PruebaController extends Controller
     	//return $datos->correo;
     	//$datos = DB::table('usuarios')->where('id',$id)->first();
     	//dd($datos);
-    	$datos = Usuarios::where('id',$id)->firstOrfail();
+    	$noticia = Noticias::where('id',$id)->firstOrfail();
     	/*if(!$datos)
     	{
     		abort(404);
     	}*/
-    	return $datos->correo;
+    	return view("ejemplo")->with("noticia",$noticia);
     }
 }

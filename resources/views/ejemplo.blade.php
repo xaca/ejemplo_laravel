@@ -6,6 +6,7 @@
 	<title>Document</title>
 </head>
 <body>
-	{{ $dato }}
+	<img src="{{ $noticia->imagen }}" />
+	<a href="/">Volver</a>
 </body>
 </html>
